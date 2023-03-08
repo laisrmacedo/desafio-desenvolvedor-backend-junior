@@ -1,6 +1,6 @@
 import { BadRequestError } from "../errors/BadRequestError"
 
-export interface registrationOutputDTO {
+export interface RegistrationOutputDTO {
   name: string,
   email: string,
   cpf: string,
@@ -13,7 +13,7 @@ export class FormDTO {
     email: unknown,
     cpf: unknown,
     phone: unknown
-  ): registrationOutputDTO{
+  ): RegistrationOutputDTO{
 
     if (!name ||  name === "") {
       throw new BadRequestError("ERROR: 'name' field is mandatory.")
@@ -43,7 +43,7 @@ export class FormDTO {
       throw new BadRequestError("ERROR: 'phone' must be of type string.")
     }
 
-    const dto: registrationOutputDTO = {
+    const dto: RegistrationOutputDTO = {
       name,
       email,
       cpf,
