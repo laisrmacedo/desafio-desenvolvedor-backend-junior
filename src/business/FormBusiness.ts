@@ -49,7 +49,7 @@ export class FormBusiness{
     const output = await this.formDatabase.getByDate(initial, final)
 
     if(!output){
-      return 'There is no record in the requested date range.'
+      return 'There is no registration in the requested date range.'
     }else{
       return output
     }
