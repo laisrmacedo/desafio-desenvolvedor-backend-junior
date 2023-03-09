@@ -44,4 +44,16 @@ export class FormDatabase{
     await knex(FormDatabase.TABLE_FORMS_ANSWERS) 
     .insert(input);
   }
+
+  public async getByDate(initial: string, final: string): Promise<FormDB[] | undefined>{
+    const result = await knex(FormDatabase.TABLE_FORMS_ANSWERS) 
+    .select()
+    .whereBetween('create_at', [initial, final])
+
+    if(result.length === 0){
+      return undefined
+    }else{
+      return result
+    }
+  }
 }
