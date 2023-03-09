@@ -75,4 +75,24 @@ describe("registration", () => {
       }
     }
   })
+
+  it("test cpf length", async () => {
+    expect.assertions(2)
+    try {
+      const input = {
+        name: 'clientTest',
+        email: 'clientTest@email.com',
+        cpf: '222222', //wrong length
+        phone: '(22)99999-9999'
+      }
+
+      await formBusiness.registration(input)
+    } catch (error) {
+      if (error instanceof BadRequestError) {
+        expect(error.message).toBe("ERROR: 'cpf' must be 11 numbers characters. Exemple: 00011122233")
+        expect(error.statusCode).toBe(400)
+      }
+    }
+  })
+
 })
