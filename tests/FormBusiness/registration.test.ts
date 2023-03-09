@@ -114,4 +114,22 @@ describe("registration", () => {
     }
   })
 
+  it("test phone length", async () => {
+    expect.assertions(2)
+    try {
+      const input = {
+        name: 'clientTest',
+        email: 'clientTest@email.com',
+        cpf: '22222222222', //wrong length
+        phone: '(22)99999-9'
+      }
+
+      await formBusiness.registration(input)
+    } catch (error) {
+      if (error instanceof BadRequestError) {
+        expect(error.message).toBe("ERROR: 'phone' must be 14 characters in format (00)99999-9999.")
+        expect(error.statusCode).toBe(400)
+      }
+    }
+  })
 })
