@@ -2,7 +2,7 @@
 
 ## 📝 Descrição
 
-Esta é uma API REST que realiza a inscrição de clientes e armamazena, localmente, o formulário no banco de dados com o servidor PostGresSQL. Foi desenvolvida em TypeScript com alguns conceitos básicos de programação orientada a objetos e arquitetura em camada, visando melhorar a segurança e escalabilidade. Foram utilizadas libs como ExpressJS e KnexJS para facilitar o roteamento e a conexão com o banco de dados. 
+Esta é uma API REST que realiza a inscrição de clientes e armamazena, localmente, o formulário no banco de dados com o servidor PostgreSQL. Foi desenvolvida em TypeScript com alguns conceitos básicos de programação orientada a objetos e arquitetura em camada, visando melhorar a segurança e escalabilidade. Foram utilizadas libs como ExpressJS e KnexJS para facilitar o roteamento e a conexão com o banco de dados. 
 
 ### Banco de Dados
 ![table](./src/assets/table.png)
@@ -31,7 +31,7 @@ https://dbdiagram.io/d/6409f841296d97641d86b9e0
   
   #Defina a porta na qual o Express será executado. Exemplo: 3003
   EXPRESS_PORT=3003
-  #Defina a porta na qual o PostGresSQL será executado. Exemplo: 5432
+  #Defina a porta na qual o PostgreSQL será executado. Exemplo: 5432
   DB_PORT=5432
   #Informe o username relacionado ao banco de dados
   DB_USER=username
@@ -39,7 +39,7 @@ https://dbdiagram.io/d/6409f841296d97641d86b9e0
   DB_PASSWORD=password
   ```
 
-4. Você pode utilizar a extensão MySQL (Weijan Chen) no VSCode para criar a conexão com o banco de dados pelo servidor PostGresSQL.
+4. Você pode utilizar a extensão MySQL (Weijan Chen) no VSCode para criar a conexão com o banco de dados pelo servidor PostgreSQL.
 5. Na conexão, abra a query e execute a criação da tabela 'forms_anwers' através do comando:
 
   ```sh
