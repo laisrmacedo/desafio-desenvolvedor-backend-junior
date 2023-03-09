@@ -78,7 +78,7 @@ https://documenter.getpostman.com/view/24460805/2s93JrvPxo
 - NodeJS;
 - Typescript;
 - Express;
-- PostGresSQL;
+- PostgreSQL;
 - Knex;
 - POO;
 - Arquitetura em Camadas;
