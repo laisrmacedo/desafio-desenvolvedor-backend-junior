@@ -14,3 +14,4 @@ const formController = new FormController(
 )
 
 formRouter.post("/", formController.registration)
+formRouter.get("/date/:initial/:final", formController.getFormsBetweenDates)
