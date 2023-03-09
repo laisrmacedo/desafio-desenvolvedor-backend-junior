@@ -31,4 +31,12 @@ export class FormDatabase{
 
     return result[0]
   }
+
+  public async findByCpf(cpf: string): Promise<FormDB | undefined>{
+    const result = await knex(FormDatabase.TABLE_FORMS_ANSWERS)
+    .select()
+    .where({cpf});
+
+    return result[0]
+  }
 }
