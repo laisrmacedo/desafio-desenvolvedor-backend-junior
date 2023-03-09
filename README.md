@@ -53,7 +53,7 @@ https://dbdiagram.io/d/6409f841296d97641d86b9e0
   );
   ```
 
-6. Run the server.
+6. Execute o servidor.
   
   ```sh
   npm run dev
@@ -62,18 +62,18 @@ https://dbdiagram.io/d/6409f841296d97641d86b9e0
 7. Você pode utilizar o Postman para testar a API. Veja mais detalhes na documentação.
 
 
-## 📜 Documentation
+## 📜 Documentação
 
 https://documenter.getpostman.com/view/24460805/2s93JrvPxo
 
 
 ## 🕹 Endpoints
 
-- Create Form
-- Get Forms Between Dates
+- POST: Create Form
+- GET: Get Forms Between Dates
 
 
-## 🛠 Technologies
+## 🛠 Tecnologias Utilizadas
 
 - NodeJS;
 - Typescript;
@@ -86,7 +86,7 @@ https://documenter.getpostman.com/view/24460805/2s93JrvPxo
 - Postman.
 
 
-## 👩‍💻 Author
+## 👩‍💻 Autora
 
 Laís Rodrigues Macedo </br>
 📧 laisrodriguesmacedo@gmail.com </br>
