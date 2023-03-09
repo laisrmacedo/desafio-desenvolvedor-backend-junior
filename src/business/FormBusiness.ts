@@ -1,5 +1,5 @@
-import { FormDatabase } from "../database/FormDatabase";
-import { RegistrationOutputDTO } from "../dto/FormDTO";
+import { FormDatabase, FormDB } from "../database/FormDatabase";
+import { GetFormsBetweenDatesOutputDTO, RegistrationOutputDTO } from "../dto/FormDTO";
 import { BadRequestError } from "../errors/BadRequestError";
 import { UnprocessableEntity } from "../errors/UnprocessableEntityError";
 
@@ -41,5 +41,17 @@ export class FormBusiness{
     }
 
     await this.formDatabase.insert(form)
+  }
+
+  public getFormsBetweenDates = async (input: GetFormsBetweenDatesOutputDTO): Promise<FormDB[] | string> => {
+    const {initial, final} = input
+
+    const output = await this.formDatabase.getByDate(initial, final)
+
+    if(!output){
+      return 'There is no record in the requested date range.'
+    }else{
+      return output
+    }
   }
 }
