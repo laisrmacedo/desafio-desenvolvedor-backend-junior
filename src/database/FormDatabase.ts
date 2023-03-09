@@ -39,4 +39,9 @@ export class FormDatabase{
 
     return result[0]
   }
+
+  public async insert(input: FormDB): Promise<void>{
+    await knex(FormDatabase.TABLE_FORMS_ANSWERS) 
+    .insert(input);
+  }
 }
