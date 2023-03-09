@@ -2,10 +2,11 @@
 
 ## 📝 Descrição
 
-Esta é uma API REST que realiza a inscrição de clientes e armamazena o formulário no banco de dados relacional PostGresSQL.
+Esta é uma API REST que realiza a inscrição de clientes e armamazena, localmente, o formulário no banco de dados com o servidor PostGresSQL. Foi desenvolvida em TypeScript com alguns conceitos básicos de programação orientada a objetos e arquitetura em camada, visando melhorar a segurança e escalabilidade. Foram utilizadas libs como ExpressJS e KnexJS para facilitar o roteamento e a conexão com o banco de dados. 
 
 ### Banco de Dados
 ![table](./src/assets/table.png)
+</br>
 https://dbdiagram.io/d/6409f841296d97641d86b9e0
 
 ### Regras de negócio
@@ -18,7 +19,7 @@ https://dbdiagram.io/d/6409f841296d97641d86b9e0
 ## 💻 Instalação
 
 1. Clone o repositório.
-2. No gerenciador de pacotes NPM, execute:
+2. No ambiente NodeJS, execute:
 
   ```sh
   npm install
@@ -80,8 +81,7 @@ https://documenter.getpostman.com/view/24460805/2s93JrvPxo
 - PostGresSQL;
 - Knex;
 - POO;
-- Layered Architecture;
-- Routing;
+- Arquitetura em Camadas;
 - Postman.
 
 
