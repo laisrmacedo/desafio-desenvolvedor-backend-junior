@@ -37,4 +37,23 @@ describe("registration", () => {
       }
     }
   })
+
+  it("test email replay", async () => {
+    expect.assertions(2)
+    try {
+      const input = {
+        name: 'clientTest',
+        email: 'client2@email.com', //already registered
+        cpf: '22222222222',
+        phone: '(22)99999-9999'
+      }
+
+      await formBusiness.registration(input)
+    } catch (error) {
+      if (error instanceof UnprocessableEntity) {
+        expect(error.message).toBe("ERROR: 'email' already registered.")
+        expect(error.statusCode).toBe(422)
+      }
+    }
+  })
 })
