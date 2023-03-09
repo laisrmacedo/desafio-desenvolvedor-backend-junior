@@ -56,4 +56,23 @@ describe("registration", () => {
       }
     }
   })
+
+  it("test cpf replay", async () => {
+    expect.assertions(2)
+    try {
+      const input = {
+        name: 'clientTest',
+        email: 'clientTest@email.com',
+        cpf: '11122233344', //already registered
+        phone: '(22)99999-9999'
+      }
+
+      await formBusiness.registration(input)
+    } catch (error) {
+      if (error instanceof UnprocessableEntity) {
+        expect(error.message).toBe("ERROR: 'cpf' already registered.")
+        expect(error.statusCode).toBe(422)
+      }
+    }
+  })
 })
