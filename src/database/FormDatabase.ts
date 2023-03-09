@@ -31,24 +31,4 @@ export class FormDatabase{
 
     return result[0]
   }
-
-  public async findByCpf(cpf: string): Promise<FormDB | undefined>{
-    const result = await knex(FormDatabase.TABLE_FORMS_ANSWERS)
-    .select()
-    .where({cpf});
-
-    return result[0]
-  }
-
-  public async insert(input: FormDB): Promise<void>{
-    await knex(FormDatabase.TABLE_FORMS_ANSWERS) 
-    .insert(input);
-  }
-
-//   public async insertUser(user: UserDB): Promise<void> {
-//     await BaseDatabase
-//         .connection(UserDatabase.TABLE_USERS)
-//         .insert(user)
-// }
 }
-
