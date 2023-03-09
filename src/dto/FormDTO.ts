@@ -7,6 +7,11 @@ export interface RegistrationOutputDTO {
   phone: string
 }
 
+export interface GetFormsBetweenDatesOutputDTO {
+  initial: string,
+  final: string
+}
+
 export class FormDTO {
   public registrationInputDTO(
     name: unknown,
@@ -48,6 +53,19 @@ export class FormDTO {
       email,
       cpf,
       phone
+    }
+
+    return dto
+  }
+
+  public getFormsBetweenDatesInputDTO(
+    initial: string,
+    final: string
+  ):GetFormsBetweenDatesOutputDTO{
+    
+    const dto: GetFormsBetweenDatesOutputDTO = {
+      initial,
+      final
     }
 
     return dto
