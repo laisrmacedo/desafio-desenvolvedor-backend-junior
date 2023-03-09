@@ -2,7 +2,7 @@
 
 ## 📝 Descrição
 
-Esta é uma API REST que realiza a inscrição de clientes e armamazena, localmente, o formulário no banco de dados com o servidor PostgreSQL. Foi desenvolvida em TypeScript com alguns conceitos básicos de programação orientada a objetos e arquitetura em camada, visando melhorar a segurança e escalabilidade. Foram utilizadas libs como ExpressJS e KnexJS para facilitar o roteamento e a conexão com o banco de dados. 
+Esta é uma API REST que realiza a inscrição de clientes e armamazena, localmente, o formulário no banco de dados com o servidor PostgreSQL. Foi desenvolvida em TypeScript com alguns conceitos básicos de programação orientada a objetos e arquitetura em camada, visando melhorar a segurança e escalabilidade. Foram utilizadas libs como ExpressJS e KnexJS para facilitar o roteamento e a conexão com o banco de dados. Além disso, foram feitos testes unitários de toda a aplicação.
 
 ### Banco de Dados
 ![table](./src/assets/table.png)
@@ -82,6 +82,7 @@ https://documenter.getpostman.com/view/24460805/2s93JrvPxo
 - Knex;
 - POO;
 - Arquitetura em Camadas;
+- Jest;
 - Postman.
 
 
