@@ -7,7 +7,7 @@ const knex = require('knex')({
   version: '7.2',
   connection: {
     host : '127.0.0.1',
-    port : 5432,
+    port : process.env.DB_PORT,
     user : process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database : 'forms_answers'
@@ -48,7 +48,7 @@ export class FormDatabase{
   public async getByDate(initial: string, final: string): Promise<FormDB[] | undefined>{
     const result = await knex(FormDatabase.TABLE_FORMS_ANSWERS) 
     .select()
-    .whereBetween('create_at', [initial, final])
+    .whereBetween('created_at', [initial, final])
 
     if(result.length === 0){
       return undefined

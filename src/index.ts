@@ -10,8 +10,8 @@ export const app = express()
 app.use(cors())
 app.use(express.json())
 
-app.listen(Number(process.env.PORT), () => {
-    console.log(`Server running on port ${Number(process.env.PORT)}`)
+app.listen(Number(process.env.EXPRESS_PORT), () => {
+    console.log(`Server running on port ${Number(process.env.EXPRESS_PORT)}`)
 })
 
 app.use("/forms", formRouter)
